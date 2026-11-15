@@ -1,0 +1,61 @@
+<PropertyList>
+
+  <path>inthoist.ac</path>
+
+  <animation>
+    <type>select</type>
+    <name>inthoist</name>
+    <condition>
+      <property>/sim/model/bell205/hoist-enabled</property>
+      <not>
+        <property>/sim/model/bell205/hoist-ext</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>inthoist</object-name>
+    <property>sim/multiplay/generic/float[16]</property>
+    <center>
+      <x-m> 0.0000</x-m>
+      <y-m>-0.0000</y-m>
+      <z-m>-0.0000</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <factor>50</factor>
+    <action>
+      <binding>
+        <command>nasal</command>
+        <script>
+          if( getprop( "sim/model/bell205/door-positions/rightSlideDoor/position-norm" )==1 ){
+            if( getprop( "controls/hoist/hoist-position" )==0 ){
+              interpolate( "controls/hoist/hoist-position", 1, 3 );
+            }else{
+              interpolate( "controls/hoist/hoist-position", 0, 3 );
+            }
+          }
+        </script>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Winch man -->
+  <model>
+    <name>Rescue-Op</name>
+    <path>Aircraft/bell205/Models/Effects/Rescue/Rescue-Op.xml</path>
+    <offsets>
+      <x-m> 0.390</x-m>
+      <y-m> 0.582</y-m>
+      <z-m> 5.200</z-m>
+      <heading-deg>135</heading-deg>
+      <pitch-deg>3</pitch-deg>
+    </offsets>
+  </model>
+  
+</PropertyList>

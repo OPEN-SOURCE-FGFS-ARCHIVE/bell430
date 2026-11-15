@@ -1,0 +1,25 @@
+AC3Db
+MATERIAL "Lights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
+OBJECT world
+kids 1
+OBJECT poly
+name "blank"
+loc 0.00138487 -0.0367774 0
+data 8
+Mesh.002
+texture "blank.png"
+crease 30.000000
+numvert 4
+0 0.0736212 -0.036306
+0 -0.0709864 -0.036306
+0 -0.0709864 0.036306
+0 0.0736212 0.036306
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0.796875 0.96875
+3 0.03125 0.96875
+2 0.03125 0.207031
+1 0.796875 0.207031
+kids 0

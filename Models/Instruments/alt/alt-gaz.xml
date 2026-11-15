@@ -1,0 +1,212 @@
+
+<PropertyList>
+
+ <!-- Smiths Military Flight System - Powered Altimeter -->
+ 
+ <path>alt-gaz.ac</path>
+ 
+ <!--model>
+  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-std.xml</path>
+ </model-->
+   <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>hpa.000</object-name>
+    <object-name>hpa.001</object-name>
+    <object-name>hpa.002</object-name>
+    <object-name>hpa.003</object-name>
+ <condition>
+	<or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+  </animation>
+ <!-- Altimeter Needle -->
+ <animation>
+  <type>rotate</type>
+  <object-name>needle1</object-name>
+  <property>position/altitude-ft</property>
+  <factor>0.36</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>needle2</object-name>
+  <property>position/altitude-ft</property>
+  <factor>0.036</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ 
+ <!-- Pressure Digits -->
+ <animation>
+  <type>textranslate</type>
+  <object-name>hpa.000</object-name>
+  <property>instrumentation/altimeter/setting-hpa</property>
+  <factor>-0.0001</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>hpa.001</object-name>
+  <property>instrumentation/altimeter/setting-hpa</property>
+  <factor>-0.001</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>hpa.002</object-name>
+  <property>instrumentation/altimeter/setting-hpa</property>
+  <factor>-0.01</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>hpa.003</object-name>
+  <property>/instrumentation/altimeter/setting-hpa</property>
+  <factor>-0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<!-- Coompositor lights-->
+  
+  <light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>0.045</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>9</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.08</range-m>
+   <intensity>0.2</intensity>
+  <dim-factor>
+    <property>systems/electrical/outputs/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+  <condition>
+   <equals>
+    <property>controls/lighting/turn-off-lights</property>
+    <value>true</value>
+   </equals>
+  <and>
+  
+  <or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+  </and>
+  </condition>
+ </animation>
+ 
+</PropertyList>

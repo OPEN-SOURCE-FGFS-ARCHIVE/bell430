@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+
+<PropertyList>
+    <path>control.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>10</max-m>
+    </animation>
+    
+    <animation>
+      <type>material</type>
+      <property-base>sim/model/material/cockpit</property-base>
+      <object-name>face</object-name>
+      <object-name>auto</object-name>
+      <object-name>direction</object-name>
+      <emission>
+        <red-prop>red</red-prop>
+        <green-prop>green</green-prop>
+        <blue-prop>blue</blue-prop>
+        <factor-prop>factor</factor-prop>
+      </emission>
+    </animation>
+	
+	<!-- power switch -->
+	
+	 <animation>
+    <type>material</type>
+    <object-name>Switch</object-name>
+    <object-name>Circle</object-name>
+    <object-name>SwitchNut</object-name>
+    <object-name>SwitchRot</object-name>
+   <emission>
+        <red>0.01</red>
+        <green>0.01</green>
+        <blue>0.01</blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/search-lights-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch</object-name>
+    <property>controls/switches/search-lights-switch</property>
+    <factor> 35 </factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

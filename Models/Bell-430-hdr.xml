@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>bell430b.ac</path>
+	
+	
+	<params>
+		<flapA>
+			<factor>0.5</factor>
+		</flapA>
+		<flapB>
+			<factor>0.4</factor>
+		</flapB>
+		<flapC>
+			<factor>0.3</factor>
+		</flapC>
+		<flapD>
+			<factor>0.3</factor>
+		</flapD>
+		<flapE>
+			<factor>0.2</factor>
+		</flapE>
+	</params>
+	
+	<effect>
+    <inherits-from>Aircraft/bell430/Models/Effects/reflect-uber</inherits-from>
+   <object-name>bell430_8</object-name>
+   <object-name>bell430_8.002</object-name>
+		<object-name>bell430.008</object-name>
+		<object-name>bell430_8.001</object-name>
+		<object-name>bell430_8.003</object-name>
+        <object-name>bell430_8.004</object-name>
+		  <object-name>bell430_5</object-name>
+  </effect>	
+	
+	
+
+
+<!--== rotors ==-->
+
+	
+
+	<!-- tail rotor blades -->
+	
+	 <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <property>sim/rendering/rembrandt/enabled</property>
+        </condition>
+		 <object-name>t-blur</object-name>
+		
+		 <object-name>bell430_6.002</object-name>
+		
+		
+	
+    </effect> 
+
+	
+ <animation>
+    <type>rotate</type>
+    <object-name>bell430_6.002</object-name>
+	<object-name>t-blur</object-name>
+    <property>rotors/tail/blade[0]/position-deg</property>
+	<factor>-0/9</factor>
+    <center>
+       <x-m> 7.8 </x-m>
+       <y-m> -5.000 </y-m>
+       <z-m> 1.16 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  1.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>bell430_6.002</object-name>
+	<object-name>t-blur</object-name>
+    <property>rotors/tail/rpm</property>
+	<factor>-0.9</factor>
+    <center>
+      <x-m> 7.8 </x-m>
+       <y-m> -5.000 </y-m>
+       <z-m> 1.16 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  1.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+
+	<animation>
+	<type>material</type>
+	<object-name>bell430_6.002</object-name>
+		<global type="bool">true</global>
+		<transparency>
+			<alpha-prop>rotors/tail/rpm</alpha-prop>
+			<factor>-0.0045</factor>
+			<offset>1</offset>
+			<max>1</max>
+		</transparency>
+    </animation>	
+	
+	 <animation>
+	<type>material</type>
+		<object-name>t-blur</object-name>
+		
+		<transparency>
+			<alpha-prop>rotors/tail/rpm</alpha-prop>
+			<factor>0.016</factor>
+			<offset>-0.25</offset>
+			<max>0.4</max>
+		</transparency>
+		<threshold>0.001</threshold>
+    </animation>
+
+
+		<animation>
+        <type>select</type>
+        <object-name>bell430_6.002</object-name>
+        <condition>
+            <less-than>
+                <property>rotors/main/rpm</property>
+                <value>201</value>
+            </less-than>
+        </condition>
+    </animation>
+	
+	 <animation>
+        <type>select</type>
+      <object-name>t-blur</object-name>
+        <condition>
+            <greater-than>
+                <property>rotors/main/rpm</property>
+                <value>180.999</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+	
+
+	
+
+
+	
+	<!-- rembrandt auto switching for glass -->
+  <effect>
+ 
+  <inherits-from>Aircraft/bell430/Models/Effects/glassout</inherits-from>
+  
+<object-name>windshield_L</object-name>
+		<object-name>glass</object-name>
+		<object-name>glass.001</object-name>
+		<object-name>glass.003</object-name>
+		<object-name>glass.004</object-name>
+		<object-name>glass.002</object-name>
+  
+</effect>
+
+ <effect>
+       <inherits-from>Effects/glass</inherits-from>
+		<object-name>glassin</object-name>
+		<object-name>glass.001in</object-name>
+		<object-name>glass.003in</object-name>
+		<object-name>glass.004in</object-name>
+		<object-name>glass.002in</object-name>
+    </effect>
+
+
+	
+	<!-- Solid Surfaces for Rembrandt rendering -->
+   <animation>
+    
+  	<object-name>bell430_8</object-name>
+	<object-name>bell430_8.002</object-name>
+		<object-name>bell430_5</object-name>
+		<object-name>bell430_1.001</object-name>
+		<object-name>bell430_1.002</object-name>
+		<object-name>bell430_1.003</object-name>
+		<object-name>bell430_6.001</object-name>
+		<object-name>bell430_6</object-name>
+		<object-name>bell430_6.002</object-name>
+		
+    </animation>	
+
+
+
+
+	
+	
+</PropertyList>
+
+
+<!-- z=0 at approximately 30cm above ground plate -->

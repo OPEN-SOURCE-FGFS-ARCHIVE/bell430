@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<model>
+<name>pilot1</name>
+<path>Aircraft/bell430/Models/People/pilot.xml</path>
+<offsets>
+<x-m>1.25</x-m>
+<y-m>1.15</y-m>
+<z-m>0.7</z-m>
+</offsets>
+</model>
+
+<!-- Passenger seats -->
+
+<!-- Middle row -->
+<model>
+<path>Aircraft/bell430/Models/Divers/hems/chair.xml</path>
+<offsets>
+<x-m> -0.83 </x-m>
+<y-m> -0.192 </y-m>
+<z-m>-0.6 </z-m>
+<heading-deg>-90</heading-deg>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/bell430/Models/Divers/hems/chair.xml</path>
+<offsets>
+<x-m> -0.83 </x-m>
+<y-m> -0.56132 </y-m>
+<z-m>-0.6 </z-m>
+<heading-deg>-90</heading-deg>
+</offsets>
+</model>
+
+<!-- Back row -->
+<model>
+<path>Aircraft/bell430/Models/Divers/hems/chair.xml</path>
+<offsets>
+<x-m> -0.14 </x-m>
+<y-m> 0.56132 </y-m>
+<z-m>-0.6 </z-m>
+<heading-deg>-90</heading-deg>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/bell430/Models/Divers/hems/chair.xml</path>
+<offsets>
+<x-m> -0.14 </x-m>
+<y-m> 0.192 </y-m>
+<z-m>-0.6 </z-m>
+<heading-deg>-90</heading-deg>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/bell430/Models/Divers/hems/chair.xml</path>
+<offsets>
+<x-m> -0.14 </x-m>
+<y-m> -0.192 </y-m>
+<z-m>-0.6 </z-m>
+<heading-deg>-90</heading-deg>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/bell430/Models/Divers/hems/chair.xml</path>
+<offsets>
+<x-m> -0.14 </x-m>
+<y-m> -0.56132 </y-m>
+<z-m>-0.6 </z-m>
+<heading-deg>-90</heading-deg>
+</offsets>
+</model>
+
+
+<!--  front row -->
+<model>
+<path>Aircraft/bell430/Models/Divers/hems/chair.xml</path>
+<offsets>
+<x-m> -1.6 </x-m>
+<y-m> -0.192 </y-m>
+<z-m>-0.6 </z-m>
+<heading-deg>-90</heading-deg>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/bell430/Models/Divers/hems/chair.xml</path>
+<offsets>
+<x-m> -1.6 </x-m>
+<y-m> -0.56132 </y-m>
+<z-m>-0.6 </z-m>
+<heading-deg>-90</heading-deg>
+</offsets>
+</model>
+
+
+</PropertyList>

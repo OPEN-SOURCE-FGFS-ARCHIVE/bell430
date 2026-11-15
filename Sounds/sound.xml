@@ -1,0 +1,1920 @@
+<?xml version="1.0"?>
+<!--
+	thanks to the SAR simulation (GPL) for the helicopter sounds,
+	and the Urban game (LGPL) for the weapon sounds
+
+	+x = aft
+	+y = left
+	+z = up
+-->
+
+<PropertyList>
+	<fx>
+		<starter>
+			<name>starter0_start</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/starter_start.wav</path>
+			<condition>
+				<property>controls/engines/engine[0]/starter</property>
+			</condition>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<position>
+				<x>-0.88</x>
+				<y>0.40</y>
+				<z>0.5</z>
+			</position>
+			<reference-dist>5</reference-dist>
+			<max-dist>10</max-dist>
+		</starter>
+
+		<starter>
+			<name>starter0_loop</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/starter_loop.wav</path>
+			<condition>
+				<property>controls/engines/engine[0]/starter</property>
+			</condition>
+			<delay-sec>11.6</delay-sec>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<position>
+				<x>-0.88</x>
+				<y>0.40</y>
+				<z>0.5</z>
+			</position>
+			<reference-dist>5</reference-dist>
+			<max-dist>10</max-dist>
+		</starter>
+
+		<starter>
+			<name>starter0_stop</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/starter_stop.wav</path>
+			<condition>
+				<not>
+					<property>controls/engines/engine[0]/starter</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<position>
+				<x>-0.88</x>
+				<y>0.40</y>
+				<z>0.5</z>
+			</position>
+			<reference-dist>5</reference-dist>
+			<max-dist>10</max-dist>
+		</starter>
+
+		<starter>
+			<name>starter1_start</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/starter_start.wav</path>
+			<condition>
+				<property>controls/engines/engine[1]/starter</property>
+			</condition>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<position>
+				<x>-0.88</x>
+				<y>-0.40</y>
+				<z>0.5</z>
+			</position>
+			<reference-dist>5</reference-dist>
+			<max-dist>10</max-dist>
+		</starter>
+
+		<starter>
+			<name>starter1_loop</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/starter_loop.wav</path>
+			<condition>
+				<property>controls/engines/engine[1]/starter</property>
+			</condition>
+			<delay-sec>11.6</delay-sec>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<position>
+				<x>-0.88</x>
+				<y>-0.40</y>
+				<z>0.5</z>
+			</position>
+			<reference-dist>5</reference-dist>
+			<max-dist>10</max-dist>
+		</starter>
+
+		<starter>
+			<name>starter1_stop</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/starter_stop.wav</path>
+			<condition>
+				<not>
+					<property>controls/engines/engine[1]/starter</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<position>
+				<x>-0.88</x>
+				<y>-0.40</y>
+				<z>0.5</z>
+			</position>
+			<reference-dist>5</reference-dist>
+			<max-dist>10</max-dist>
+		</starter>
+
+		<engine>
+			<name>turbine0-start</name>
+			<mode>once</mode>
+			<path>Sounds/turbine_start.wav</path>
+			<condition>
+				<property>engines/engine[0]/running</property>
+			</condition>
+			<volume>
+				<factor>0.03</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>5</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>turbine0-loop</name>
+			<mode>looped</mode>
+			<path>Sounds/turbine_loop.wav</path>
+			<condition>
+				<property>engines/engine[0]/running</property>
+			</condition>
+			<delay-sec>7.5</delay-sec>
+			<volume>
+				<factor>0.03</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>5</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>turbine0-shutdown</name>
+			<mode>once</mode>
+			<path>Sounds/turbine_shutdown.wav</path>
+			<condition>
+				<not>
+					<property>engines/engine[0]/running</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>0.03</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>5</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>turbine1-start</name>
+			<mode>once</mode>
+			<path>Sounds/turbine_start.wav</path>
+			<condition>
+				<property>engines/engine[1]/running</property>
+			</condition>
+			<volume>
+				<factor>0.03</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>5</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>turbine1-loop</name>
+			<mode>looped</mode>
+			<path>Sounds/turbine_loop.wav</path>
+			<condition>
+				<property>engines/engine[1]/running</property>
+			</condition>
+			<delay-sec>7.5</delay-sec>
+			<volume>
+				<factor>0.03</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>5</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>turbine1-shutdown</name>
+			<mode>once</mode>
+			<path>Sounds/turbine_shutdown.wav</path>
+			<condition>
+				<not>
+					<property>engines/engine[1]/running</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>0.03</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>5</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>exhaust0-start</name>
+			<mode>once</mode>
+			<path>Sounds/exhaust_start.wav</path>
+			<condition>
+				<property>engines/engine[0]/running</property>
+			</condition>
+			<volume>
+				<factor>0.02</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>10</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>exhaust0-loop</name>
+			<mode>looped</mode>
+			<path>Sounds/exhaust_loop.wav</path>
+			<condition>
+				<property>engines/engine[0]/running</property>
+			</condition>
+			<delay-sec>11.5</delay-sec>
+			<volume>
+				<factor>0.02</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>10</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>exhaust0-shutdown</name>
+			<mode>once</mode>
+			<path>Sounds/exhaust_shutdown.wav</path>
+			<condition>
+				<not>
+					<property>engines/engine[0]/running</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>0.02</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>10</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>exhaust1-start</name>
+			<mode>once</mode>
+			<path>Sounds/exhaust_start.wav</path>
+			<condition>
+				<property>engines/engine[1]/running</property>
+			</condition>
+			<volume>
+				<factor>0.02</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>10</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>exhaust1-loop</name>
+			<mode>looped</mode>
+			<path>Sounds/exhaust_loop.wav</path>
+			<condition>
+				<property>engines/engine[1]/running</property>
+			</condition>
+			<delay-sec>11.5</delay-sec>
+			<volume>
+				<factor>0.02</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>10</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>exhaust1-shutdown</name>
+			<mode>once</mode>
+			<path>Sounds/exhaust_shutdown.wav</path>
+			<condition>
+				<not>
+					<property>engines/engine[1]/running</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>0.02</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>10</factor>
+			</volume>
+			<reference-dist>50</reference-dist>
+			<max-dist>200</max-dist>
+		</engine>
+
+		<engine>
+			<name>engineinside-left-front</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/B430_Engine_Internal-left.wav</path>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<greater-than>
+						<property>engines/engine/rpm</property>
+						<value>10</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[0]/n1-pct</property>
+				<factor>0.02</factor>
+			</volume>
+			<pitch>
+				<property>engines/engine[0]/n1-pct</property>
+				<factor>0.01</factor>
+				<offset>-0.0</offset>
+			</pitch>
+			<position>
+				<x-m> -2.65 </x-m>
+				<y-m> 0.25 </y-m>
+				<z-m>  0.38 </z-m>
+			</position>
+		</engine>
+
+		<engine>
+			<name>engineinside-left-rear</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/B430_Engine_Internal-left.wav</path>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<greater-than>
+						<property>engines/engine/rpm</property>
+						<value>10</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[0]/n1-pct</property>
+				<factor>0.02</factor>
+			</volume>
+			<pitch>
+				<property>engines/engine[0]/n1-pct</property>
+				<factor>0.01</factor>
+				<offset>-0.0</offset>
+			</pitch>
+			<position>
+				<x-m> -2.05 </x-m>
+				<y-m> 0.25 </y-m>
+				<z-m>  0.38 </z-m>
+			</position>
+		</engine>
+
+		<engine>
+			<name>engineinside-right-front</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/B430_Engine_Internal-right.wav</path>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<greater-than>
+						<property>engines/engine/rpm</property>
+						<value>10</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[1]/n1-pct</property>
+				<factor>0.02</factor>
+			</volume>
+			<pitch>
+				<property>engines/engine[1]/n1-pct</property>
+				<factor>0.01</factor>
+				<offset>-0.0</offset>
+			</pitch>
+			<position>
+				<x-m> -2.65 </x-m>
+				<y-m>  0.85 </y-m>
+				<z-m>  0.38 </z-m>
+			</position>
+		</engine>
+
+		<engine>
+			<name>engineinside-right-rear</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/B430_Engine_Internal-right.wav</path>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<greater-than>
+						<property>engines/engine/rpm</property>
+						<value>10</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[1]/n1-pct</property>
+				<factor>0.02</factor>
+			</volume>
+			<pitch>
+				<property>engines/engine[1]/n1-pct</property>
+				<factor>0.01</factor>
+				<offset>-0.0</offset>
+			</pitch>
+			<position>
+				<x-m> -2.05 </x-m>
+				<y-m>  0.85 </y-m>
+				<z-m>  0.38 </z-m>
+			</position>
+		</engine>
+
+		<rotor>
+			<name>rotor-outside</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/rotor.wav</path>
+			<condition>
+				<and>
+					<not>
+						<property>sim/current-view/internal</property>
+					</not>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>50</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>rotors/main/rpm</property>
+				<factor>0.002</factor>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.002262</factor>
+				<offset>0</offset>
+				<min>0</min>
+				<max>1.5</max>
+			</pitch>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+		</rotor>
+
+		<rotor>
+			<name>rotor-inside-left-front</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/B430_Rotor_Internal-left.wav</path>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>1</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>rotors/main/rpm</property>
+				<factor>0.00522193211</factor>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.00287356321</factor>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x-m> -2.65 </x-m>
+				<y-m> 0.25 </y-m>
+				<z-m>  0.38 </z-m>
+			</position>
+		</rotor>
+
+		<rotor>
+			<name>rotor-inside-left-rear</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/B430_Rotor_Internal-left.wav</path>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>1</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>rotors/main/rpm</property>
+				<factor>0.00522193211</factor>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.00287356321</factor>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x-m> -2.05 </x-m>
+				<y-m> 0.25 </y-m>
+				<z-m>  0.38 </z-m>
+			</position>
+		</rotor>
+
+		<rotor>
+			<name>rotor-inside-right-front</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/B430_Rotor_Internal-right.wav</path>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>1</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>rotors/main/rpm</property>
+				<factor>0.00522193211</factor>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.00287356321</factor>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x-m> -2.65 </x-m>
+				<y-m>  0.85 </y-m>
+				<z-m>  0.38 </z-m>
+			</position>
+		</rotor>
+
+		<rotor>
+			<name>rotor-inside-right-rear</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/B430_Rotor_Internal-right.wav</path>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>1</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>rotors/main/rpm</property>
+				<factor>0.00522193211</factor>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.00287356321</factor>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x-m> -2.05 </x-m>
+				<y-m>  0.85 </y-m>
+				<z-m>  0.38 </z-m>
+			</position>
+		</rotor>
+
+		<rotor>
+			<name>stall</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/rotor_stall.wav</path>
+			<condition>
+				<and>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>50</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>sim/model/bell430/sound/volume</property>
+				<factor>0.8</factor>
+			</volume>
+			<volume>
+				<property>rotors/main/stall-filtered</property>
+				<factor>75</factor>
+				<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.002262</factor>
+				<offset>0</offset>
+				<max>1.75</max>
+			</pitch>
+			<reference-dist>1000</reference-dist>
+			<max-dist>3000</max-dist>
+		</rotor>
+
+		<!--<rotor>
+			<name>blade-vortex-interaction</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/blade_vortex.wav</path>
+			<condition>
+				<greater-than>
+					<property>sim/sound/vibration</property>
+					<value>0.01</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/vibration</property>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.002262</factor>
+				<offset>0</offset>
+				<min>0</min>
+				<max>1.5</max>
+			</pitch>
+			<reference-dist>1000</reference-dist>
+			<max-dist>3000</max-dist>
+		</rotor>
+
+		<overspeed>
+			<name>overspeed</name>
+			<mode>looped</mode>
+			<path>Sounds/overspeed.wav</path>
+			<condition>
+				<greater-than>
+					<property>velocities/airspeed-kt</property>
+					<value>146</value>
+				</greater-than>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<volume>
+				<factor>1.0</factor>
+			</volume>
+			<pitch>
+				<factor>0.1</factor>
+			</pitch>
+			<reference-dist>1.0</reference-dist>
+			<max-dist>2.0</max-dist>
+		</overspeed>
+-->
+		<warning>
+			<name>650 Hz</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/warn650.wav</path>
+			<condition>
+				<property>sim/sound/warn650</property>
+			</condition>
+			<reference-dist>0.5</reference-dist>
+			<max-dist>1.0</max-dist>
+		</warning>
+
+		<warning>
+			<name>2600 Hz</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/warn2600.wav</path>
+			<condition>
+				<property>sim/sound/warn2600</property>
+			</condition>
+			<reference-dist>0.5</reference-dist>
+			<max-dist>1.0</max-dist>
+		</warning>
+
+		<contact>
+			<name>ground contact</name>
+			<mode>once</mode>
+			<path>Sounds/helicopter-skid.wav</path>
+			<condition>
+				<property>gear/gear[0]/wow</property>
+			</condition>
+			<volume>
+				<factor>0.8</factor>
+			</volume>
+			<pitch>
+				<factor>0.01</factor>
+			</pitch>
+			<reference-dist>5.0</reference-dist>
+			<max-dist>10.0</max-dist>
+		</contact>
+
+		<contact>
+			<name>ground contact</name>
+			<mode>once</mode>
+			<path>Sounds/helicopter-skid.wav</path>
+			<condition>
+				<property>gear/gear[1]/wow</property>
+			</condition>
+			<volume>
+				<factor>0.8</factor>
+			</volume>
+			<pitch>
+				<factor>0.01</factor>
+			</pitch>
+			<reference-dist>5.0</reference-dist>
+			<max-dist>10.0</max-dist>
+		</contact>
+
+		<contact>
+			<name>ground contact</name>
+			<mode>once</mode>
+			<path>Sounds/helicopter-skid.wav</path>
+			<condition>
+				<property>gear/gear[2]/wow</property>
+			</condition>
+			<volume>
+				<factor>0.8</factor>
+			</volume>
+			<pitch>
+				<factor>0.01</factor>
+			</pitch>
+			<reference-dist>5.0</reference-dist>
+			<max-dist>10.0</max-dist>
+		</contact>
+
+		<contact>
+			<name>ground contact</name>
+			<mode>once</mode>
+			<path>Sounds/helicopter-skid.wav</path>
+			<condition>
+				<property>gear/gear[3]/wow</property>
+			</condition>
+			<volume>
+				<factor>0.8</factor>
+			</volume>
+			<pitch>
+				<factor>0.01</factor>
+			</pitch>
+			<reference-dist>5.0</reference-dist>
+			<max-dist>10.0</max-dist>
+		</contact>
+
+		<contact>
+			<name>ground contact</name>
+			<mode>once</mode>
+			<path>Sounds/helicopter-skid.wav</path>
+			<condition>
+				<property>gear/gear[4]/wow</property>
+			</condition>
+			<volume>
+				<factor>0.8</factor>
+			</volume>
+			<pitch>
+				<factor>0.01</factor>
+			</pitch>
+			<reference-dist>5.0</reference-dist>
+			<max-dist>10.0</max-dist>
+		</contact>
+
+		<slide>
+			<name>skid sliding1</name>
+			<mode>looped</mode>
+			<path>Sounds/rumble.wav</path>
+			<condition>
+				<and>
+					<property>gear/gear[0]/wow</property>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<factor>0.5</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/slide[0]/volume</property>
+				<max>1</max>
+			</volume>
+			<pitch>
+				<property>sim/model/bell430/sound/slide[0]/pitch</property>
+			</pitch>
+		</slide>
+
+		<slide>
+			<name>skid sliding2</name>
+			<mode>looped</mode>
+			<path>Sounds/rumble.wav</path>
+			<condition>
+				<and>
+					<property>gear/gear[1]/wow</property>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<factor>0.5</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/slide[1]/volume</property>
+				<max>1</max>
+			</volume>
+			<pitch>
+				<property>sim/model/bell430/sound/slide[1]/pitch</property>
+			</pitch>
+		</slide>
+
+		<slide>
+			<name>skid sliding3</name>
+			<mode>looped</mode>
+			<path>Sounds/rumble.wav</path>
+			<condition>
+				<and>
+					<property>gear/gear[2]/wow</property>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<factor>0.5</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/slide[2]/volume</property>
+				<max>1</max>
+			</volume>
+			<pitch>
+				<property>sim/model/bell430/sound/slide[2]/pitch</property>
+			</pitch>
+		</slide>
+
+		<slide>
+			<name>skid sliding4</name>
+			<mode>looped</mode>
+			<path>Sounds/rumble.wav</path>
+			<condition>
+				<and>
+					<property>gear/gear[3]/wow</property>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<factor>0.5</factor>
+			</volume>
+			<volume>
+				<property>sim/model/bell430/sound/slide[3]/volume</property>
+				<max>1</max>
+			</volume>
+			<pitch>
+				<property>sim/model/bell430/sound/slide[3]/pitch</property>
+			</pitch>
+		</slide>
+
+		<!--<wind>
+			<name>wind</name>
+			<mode>looped</mode>
+			<path>Sounds/wind.wav</path>
+			<condition>
+				<and>
+					<property>velocities/airspeed-kt</property>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>position/altitude-ft</property>
+				<factor>-0.000015</factor>
+				<offset>1.0</offset>
+				<min>0.1</min>
+				<max>1.0</max>
+			</volume>
+			<volume>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.0015</factor>
+				<min>0.03</min>
+				<max>0.25</max>
+			</volume>
+			<pitch>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.01</factor>
+				<offset>1.25</offset>
+			</pitch>
+			<reference-dist>3</reference-dist>
+			<max-dist>4</max-dist>
+		</wind>
+-->
+		<crash>
+			<name>intense ground contact</name>
+			<mode>once</mode>
+			<path>Sounds/crash.wav</path>
+			<property>sim/crashed</property>
+			<volume>
+				<factor>1</factor>
+			</volume>
+			<pitch>
+				<factor>0.1</factor>
+			</pitch>
+			<reference-dist>100</reference-dist>
+			<max-dist>500</max-dist>
+		</crash>
+
+		<gun>
+			<name>GE M134 right</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/GE-M134.wav</path>
+			<condition>
+				<and>
+					<property>sim/model/bell430/weapons/MG[0]/trigger</property>
+					<property>ai/submodels/submodel[0]/count</property>
+				</and>
+			</condition>
+			<position>
+				<x>0.88</x>
+				<y>-0.19</y>
+				<z>-0.2</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>500</max-dist>
+		</gun>
+
+		<gun>
+			<name>GE M134 left</name>
+			<mode>looped</mode>
+			<path>Aircraft/bell430/Sounds/GE-M134.wav</path>
+			<condition>
+				<and>
+					<property>sim/model/bell430/weapons/MG[1]/trigger</property>
+					<property>ai/submodels/submodel[1]/count</property>
+				</and>
+			</condition>
+			<position>
+				<x>-0.88</x>
+				<y>-0.19</y>
+				<z>-0.2</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>500</max-dist>
+		</gun>
+
+		<HOT>
+			<name>HOT_OR</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/HOT.wav</path>
+			<property>sim/model/bell430/weapons/HOT[0]/trigger</property>
+			<position>
+				<x>1.58</x>
+				<y>-0.25</y>
+				<z>0.13</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>500</max-dist>
+		</HOT>
+
+		<HOT>
+			<name>HOT_OL</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/HOT.wav</path>
+			<property>sim/model/bell430/weapons/HOT[1]/trigger</property>
+			<position>
+				<x>-1.58</x>
+				<y>-0.25</y>
+				<z>0.13</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>500</max-dist>
+		</HOT>
+
+		<HOT>
+			<name>HOT_MR</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/HOT.wav</path>
+			<property>sim/model/bell430/weapons/HOT[2]/trigger</property>
+			<position>
+				<x>1.39</x>
+				<y>-0.07</y>
+				<z>0.13</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>500</max-dist>
+		</HOT>
+
+		<HOT>
+			<name>HOT_ML</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/HOT.wav</path>
+			<property>sim/model/bell430/weapons/HOT[3]/trigger</property>
+			<position>
+				<x>-1.39</x>
+				<y>-0.07</y>
+				<z>0.13</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>500</max-dist>
+		</HOT>
+
+		<HOT>
+			<name>HOT_IR</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/HOT.wav</path>
+			<property>sim/model/bell430/weapons/HOT[4]/trigger</property>
+			<position>
+				<x>1.21</x>
+				<y>0.08</y>
+				<z>0.13</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>500</max-dist>
+		</HOT>
+
+		<HOT>
+			<name>HOT_IL</name>
+			<mode>once</mode>
+			<path>Aircraft/bell430/Sounds/HOT.wav</path>
+			<property>sim/model/bell430/weapons/HOT[5]/trigger</property>
+			<position>
+				<x>-1.21</x>
+				<y>0.08</y>
+				<z>0.13</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>500</max-dist>
+		</HOT>
+
+		<door>
+			<name>close right frontdoor</name>
+			<mode>once</mode>
+			<path>Sounds/door_close.wav</path>
+			<condition>
+				<equals>
+					<property>sim/model/bell430/doors/door[0]/position-norm</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<position>
+				<x>1.0</x>
+				<y>1.5</y>
+				<z>-1.5</z>
+			</position>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<reference-dist>15</reference-dist>
+			<max-dist>50</max-dist>
+		</door>
+
+		<door>
+			<name>close left frontdoor</name>
+			<mode>once</mode>
+			<path>Sounds/door_close.wav</path>
+			<condition>
+				<equals>
+					<property>sim/model/bell430/doors/door[1]/position-norm</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<position>
+				<x>-1.0</x>
+				<y>1.5</y>
+				<z>-1.5</z>
+			</position>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<reference-dist>15</reference-dist>
+			<max-dist>50</max-dist>
+		</door>
+
+		<door>
+			<name>close right backdoor</name>
+			<mode>once</mode>
+			<path>Sounds/door_close.wav</path>
+			<condition>
+				<equals>
+					<property>sim/model/bell430/doors/door[2]/position-norm</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<position>
+				<x>1.0</x>
+				<y>1.0</y>
+				<z>-1.5</z>
+			</position>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<reference-dist>15</reference-dist>
+			<max-dist>50</max-dist>
+		</door>
+
+		<door>
+			<name>close left backdoor</name>
+			<mode>once</mode>
+			<path>Sounds/door_close.wav</path>
+			<condition>
+				<equals>
+					<property>sim/model/bell430/doors/door[3]/position-norm</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<position>
+				<x>-1.0</x>
+				<y>1.0</y>
+				<z>-1.5</z>
+			</position>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<reference-dist>15</reference-dist>
+			<max-dist>50</max-dist>
+		</door>
+
+		<door>
+			<name>close right reardoor</name>
+			<mode>once</mode>
+			<path>Sounds/door_close.wav</path>
+			<condition>
+				<equals>
+					<property>sim/model/bell430/doors/door[4]/position-norm</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<position>
+				<x>0.0</x>
+				<y>-1.5</y>
+				<z>-1.0</z>
+			</position>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<reference-dist>15</reference-dist>
+			<max-dist>50</max-dist>
+		</door>
+
+		<door>
+			<name>close left reardoor</name>
+			<mode>once</mode>
+			<path>Sounds/door_close.wav</path>
+			<condition>
+				<equals>
+					<property>sim/model/bell430/doors/door[5]/position-norm</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<position>
+				<x>0.0</x>
+				<y>-1.5</y>
+				<z>-1.0</z>
+			</position>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<reference-dist>15</reference-dist>
+			<max-dist>50</max-dist>
+		</door>
+		
+		  <rotor>
+            <name>rotorinside</name>
+            <mode>looped</mode>
+            <path>Aircraft/bell430/Sounds/inside_noflap.wav</path>
+            <condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>50</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<factor>0.2</factor>
+			</volume>
+			<volume>
+				<property>rotors/main/rpm</property>
+				<factor>0.002</factor>
+			</volume>
+            <pitch>
+                <property>rotors/main/rpm</property>
+                <factor>0.00325</factor>
+                <offset>-0.0</offset>
+                <max>2.5</max>
+            </pitch>
+            <reference-dist>500</reference-dist>
+            <max-dist>1000</max-dist>
+        </rotor>
+		
+		 <rotor>
+            <name>tail_rotor</name>
+            <mode>looped</mode>
+            <path>Aircraft/bell430/Sounds/tailrotor.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>rotors/main/rpm</property>
+                        <value>50</value>
+                    </greater-than>
+                    <not>
+                        <property>sim/crashed</property>
+                    </not>
+			<not>
+			<property>sim/current-view/internal</property>
+			</not>
+                </and>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+            </volume>
+            <pitch>
+                <property>rotors/tail/rpm</property>
+                <factor>0.0006</factor>
+                <offset>-0.0</offset>
+                <max>2.5</max>
+            </pitch>
+            <position>
+                <x> -2 </x>
+                <y> -0.4 </y>
+                <z> 1.3 </z>
+            </position>
+            <orientation>
+                <x> 1 </x>
+                <y> . </y>
+                <z> 0 </z>
+                <inner-angle>110</inner-angle>
+                <outer-angle>220</outer-angle>
+                <outer-gain>0.1</outer-gain>
+            </orientation>
+            <reference-dist>500</reference-dist>
+            <max-dist>5000</max-dist>
+        </rotor>
+		
+		  <gear>
+      <name>gear</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/bell430/Sounds/gear-move.wav</path>
+      <property>/gear/gear[0]/position-norm</property>
+      <pitch>
+        <internal>dt_play</internal>
+        <offset>1.0</offset>
+        <factor>-0.001</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+	 <contact>
+      <name>ground contact</name>
+      <mode>once</mode>
+      <path>Aircraft/bell430/Sounds/wheel.wav</path>
+      <condition>
+        <property>gear/gear[0]/wow</property>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <pitch>
+        <factor>0.01</factor>
+      </pitch>
+      <reference-dist>5.0</reference-dist>
+      <max-dist>10.0</max-dist>
+    </contact>
+
+    <contact>
+      <name>ground contact</name>
+      <mode>once</mode>
+      <path>Aircraft/bell430/Sounds/wheel.wav</path>
+      <condition>
+        <property>gear/gear[1]/wow</property>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <pitch>
+        <factor>0.01</factor>
+      </pitch>
+      <reference-dist>5.0</reference-dist>
+      <max-dist>10.0</max-dist>
+    </contact>
+
+    <contact>
+      <name>ground contact</name>
+      <mode>once</mode>
+      <path>Aircraft/bell430/Sounds/wheel.wav</path>
+      <condition>
+        <property>gear/gear[2]/wow</property>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <pitch>
+        <factor>0.01</factor>
+      </pitch>
+      <reference-dist>5.0</reference-dist>
+      <max-dist>10.0</max-dist>
+    </contact>	
+	
+	<!-- switches -->
+	<!--                  Toggle Switches                  -->     
+    <click> 
+      <name>Battery on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/electric/battery-switch</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Battery off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/electric/battery-switch</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+    
+    <click> 
+      <name>gen1 on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/electric/engine/generator</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>gen1 off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/electric/engine/generator</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	 <click> 
+      <name>gen2 on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/electric/engine[1]/generator</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>gen2 off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/electric/engine[1]/generator</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	
+	 <click> 
+      <name>pitot on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/anti-ice/pitot-heat</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>pitot off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/anti-ice/pitot-heat</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	 <click> 
+      <name>beacon on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/switches/beacon-switch</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>beacon off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/switches/beacon-switch</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	 <click> 
+      <name>fadec on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/switches/fadectest</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>fadec off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/switches/fadectest</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	 <click> 
+      <name>firetest on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/switches/firetest</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>firetest off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/switches/firetest</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	 <click> 
+      <name>formation on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/switches/white-light</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>formation off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/switches/white-light</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	 <click> 
+      <name>landing on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/switches/landing-lights-switch</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>landing off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/switches/landing-lights-switch</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	 <click> 
+      <name>nav on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/switches/nav-lights-switch</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>nav off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/switches/nav-lights-switch</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	 <click> 
+      <name>strobe on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/switches/strobe-switch</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>strobe off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/switches/strobe-switch</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	
+	
+	<!--
+	<rotor>
+			<name>blade-vortex-interaction-G</name>
+			<mode>looped</mode>
+			 <path>Aircraft/bell430/Sounds/blade_vortex.wav</path>
+			<condition>
+           <and>
+				<greater-than>
+					<property>sim/multiplay/generic/float[15]</property>
+					<value>1.4</value>
+				</greater-than>
+				  <not>
+			<property>sim/current-view/internal</property>
+		    </not>
+				
+			</and>	
+						
+			</condition>
+			<volume>
+				<property>accelerations/pilot-g</property>
+				<factor>0.0001</factor>
+    	<offset>0.25</offset>
+	<min>0.0</min>
+	<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.002262</factor>
+				<offset>0</offset>
+				<min>0</min>
+				<max>1.5</max>
+			</pitch>
+			
+			<max-dist>3000</max-dist>
+		</rotor>
+		
+		
+		<rotor>
+			<name>blade-vortex-interaction-G-inside</name>
+			<mode>looped</mode>
+			 <path>Aircraft/bell430/Sounds/blade_vortex.wav</path>
+			<condition>
+           <and>
+				<greater-than>
+					<property>sim/multiplay/generic/float[15]</property>
+					<value>1.4</value>
+				</greater-than>
+				 
+			<property>sim/current-view/internal</property>
+		    
+				
+			</and>	
+						
+			</condition>
+			<volume>
+				<property>accelerations/pilot-g</property>
+				<factor>0.0001</factor>
+    	<offset>0.25</offset>
+	<min>0.0</min>
+	<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.002262</factor>
+				<offset>0</offset>
+				<min>0</min>
+				<max>1.5</max>
+			</pitch>
+			
+			<max-dist>30</max-dist>
+		</rotor>
+		-->
+		
+		
+<!-- new votex and sound stuff  -->
+		<rotor>
+			<name>vortex0-front-left</name>
+			<path>Aircraft/bell430/Sounds/H145_Vortex_In-left.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>sim/current-view/internal</property>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/sound/vibration</property>
+				<factor>10</factor>
+			</volume>
+            <volume>
+				<property>/sounds/H145/rotors/IGE</property>
+				<factor>1.5</factor>
+			</volume>
+			<pitch>
+				<property>/rotors/main/rpm</property>
+				<offset>0</offset>
+				<factor>0.00201096605744</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>.14</y>
+				<z>0.4</z>
+			</position>
+		</rotor>
+		
+		<rotor>
+			<name>vortex0-front-right</name>
+			<path>Aircraft/bell430/Sounds/H145_Vortex_In-right.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>sim/current-view/internal</property>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/sound/vibration</property>
+				<factor>10</factor>
+			</volume>
+            <volume>
+				<property>/sounds/H145/rotors/IGE</property>
+				<factor>1.5</factor>
+			</volume>
+			<pitch>
+				<property>/rotors/main/rpm</property>
+				<offset>0</offset>
+				<factor>0.00201096605744</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>-.86</y>
+				<z>0.4</z>
+			</position>
+		</rotor>
+		
+		
+		<rotor>
+			<name>vortex1-front-left</name>
+			<path>Aircraft/bell430/Sounds/H145_IGE_Vortex_In-left.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>sim/current-view/internal</property>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/sound/vibration</property>
+				<factor>11</factor>
+			</volume>
+            <volume>
+				<property>/sounds/H145/rotors/IGE2</property>
+				<factor>1.5</factor>
+			</volume>
+			<pitch>
+				<property>/rotors/main/rpm</property>
+				<offset>0</offset>
+				<factor>0.00201096605744</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>.14</y>
+				<z>0.4</z>
+			</position>
+		</rotor>
+		<rotor>
+			<name>vortex1-front-right</name>
+			<path>Aircraft/bell430/Sounds/H145_IGE_Vortex_In-right.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>sim/current-view/internal</property>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/sound/vibration</property>
+				<factor>11</factor>
+			</volume>
+            <volume>
+				<property>/sounds/H145/rotors/IGE2</property>
+				<factor>1.5</factor>
+			</volume>
+			<pitch>
+				<property>/rotors/main/rpm</property>
+				<offset>0</offset>
+				<factor>0.00201096605744</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>-.86</y>
+				<z>0.4</z>
+			</position>
+		</rotor>	
+
+<wind>
+			<name>wind-in-front-left</name>
+			<path>Aircraft/bell430/Sounds/H145_Wind_In-left.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>/sim/current-view/internal</property>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sounds/H145/environment/wind-in</property>
+				<factor>1</factor>
+			</volume>
+			<pitch>
+				<property>/velocities/airspeed-kt</property>
+				<offset>0.75</offset>
+				<factor>0.00177304965</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>.14</y>
+				<z>0.4</z>
+			</position>
+		</wind>
+		<wind>
+			<name>wind-in-front-right</name>
+			<path>Aircraft/bell430/Sounds/H145_Wind_In-right.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>/sim/current-view/internal</property>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sounds/H145/environment/wind-in</property>
+				<factor>1</factor>
+			</volume>
+			<pitch>
+				<property>/velocities/airspeed-kt</property>
+				<offset>0.75</offset>
+				<factor>0.00177304965</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>-.86</y>
+				<z>0.4</z>
+			</position>
+		</wind>				
+		
+	</fx>
+</PropertyList>

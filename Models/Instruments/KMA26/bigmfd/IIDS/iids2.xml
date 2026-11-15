@@ -1,0 +1,366 @@
+<PropertyList>
+
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>10</max-m>
+    </animation>
+
+        <path>eng2.ac</path>
+		
+	<animation>
+<type>material</type>
+<object-name>screen6</object-name>
+<emission>
+<factor-prop>controls/lighting/landing-lights</factor-prop>
+<red>   0.3 </red>
+<green> 0.3 </green>
+<blue>  0.3 </blue>
+</emission>
+</animation>		
+<!-- text -->	
+	
+	<animation>
+  <type>material</type>
+  <object-name>fuel</object-name>
+  <object-name>e1c</object-name>
+    <object-name>e1p</object-name>
+ <object-name>e2c</object-name>
+    <object-name>e2p</object-name>
+ <object-name>mgbc</object-name>
+    <object-name>mgbp</object-name>	
+	
+	 <object-name>e1ca</object-name>
+    <object-name>e1pa</object-name>
+ <object-name>e2ca</object-name>
+    <object-name>e2pa</object-name>
+ <object-name>mgbca</object-name>
+    <object-name>mgbpa</object-name>	
+ 
+  <ambient>
+    <red>0.5</red>
+    <green>0.5</green>
+    <blue>0.8</blue>
+  </ambient>
+  <diffuse>
+    <red>0.3</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+  </diffuse>
+  <emission>
+    <red>0.5</red>
+    <green>0.5</green>
+    <blue>0.8</blue>
+  </emission> 
+ </animation>
+ 
+ 
+ <text>
+  <name>e1c</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.006</character-size>
+  <offsets>
+   <x-m>0.0015</x-m>
+   <y-m>-0.087</y-m>
+   <z-m>0.07</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">number-value</type>
+   <format type="string">%3.1f</format>
+  <truncate type="bool">true</truncate>
+  <property>engines/engine/oil-temperature-degc</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>		
+ 
+ <text>
+  <name>e1p</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.006</character-size>
+  <offsets>
+ <x-m>0.0015</x-m>
+   <y-m>-0.065</y-m>
+   <z-m>0.07</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">number-value</type>
+   <format type="string">%1.3f</format>
+  <truncate type="bool">true</truncate>
+  <property>engines/engine/oil-pressure-bar</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>	
+ 
+ <text>
+  <name>mgbc</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.006</character-size>
+  <offsets>
+  <x-m>0.0015</x-m>
+   <y-m>-0.013</y-m>
+   <z-m>0.07</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">number-value</type>
+   <format type="string">%1.1f</format>
+  <truncate type="bool">true</truncate>
+  <property>engines/engine/oil-temperature-degc</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>	
+ 
+ <text>
+  <name>mgbp</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.006</character-size>
+  <offsets>
+  <x-m>0.0015</x-m>
+   <y-m>0.01</y-m>
+   <z-m>0.07</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">number-value</type>
+   <format type="string">%1.3f</format>
+  <truncate type="bool">true</truncate>
+  <property>rotors/gear/mgb-oil-pressure-bar</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>	
+ 
+ <text>
+  <name>e2c</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.006</character-size>
+  <offsets>
+ <x-m>0.0015</x-m>
+   <y-m>0.059</y-m>
+   <z-m>0.07</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">number-value</type>
+   <format type="string">%3.1f</format>
+  <truncate type="bool">true</truncate>
+  <property>engines/engine[1]/oil-temperature-degc</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>	
+ 
+ 
+  <text>
+  <name>e2p</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.006</character-size>
+  <offsets>
+  <x-m>0.0015</x-m>
+   <y-m>0.082</y-m>
+   <z-m>0.07</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">number-value</type>
+   <format type="string">%1.3f</format>
+  <truncate type="bool">true</truncate>
+  <property>engines/engine[1]/oil-pressure-bar</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>	
+ 
+ <text>
+  <name>fuel</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.006</character-size>
+  <offsets>
+  <x-m>0.0015</x-m>
+   <y-m>-0.015</y-m>
+   <z-m>-0.039</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">number-value</type>
+   <format type="string">%5.2f</format>
+  <truncate type="bool">true</truncate>
+  <property>consumables/fuel/total-fuel-lbs</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+
+<!-- arrows -->
+ 
+ <text>
+  <name>e1ca</name>
+  <font>courier-bold.txf</font>
+  <character-size type="double">0.009</character-size>
+  <offsets>
+ <x-m>0.0015</x-m>
+   <y-m>-0.08</y-m>
+   <z-m>-0.015</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">*</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text> 
+
+ 
+ 	<animation>
+		<type>translate</type>
+		 <object-name>e1ca</object-name>
+		<property>engines/engine/oil-temperature-degc</property>
+		  <interpolation>
+            <entry><ind>0.0</ind><dep>0</dep></entry>
+            <entry><ind>250</ind><dep>0.117</dep></entry>
+        </interpolation>
+		<axis>
+			<z>1</z>
+		</axis>
+	</animation>
+ 
+ <text>
+  <name>e1pa</name>
+  <font>courier-bold.txf</font>
+  <character-size type="double">0.009</character-size>
+  <offsets>
+  <x-m>0.0015</x-m>
+   <y-m>-0.06</y-m>
+   <z-m>-0.015</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">*</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+
+<animation>
+		<type>translate</type>
+		 <object-name>e1pa</object-name>
+		<property>engines/engine/oil-pressure-bar</property>
+		  <interpolation>
+            <entry><ind>0.0</ind><dep>0</dep></entry>
+            <entry><ind>10</ind><dep>0.117</dep></entry>
+        </interpolation>
+		<axis>
+			<z>1</z>
+		</axis>
+	</animation>
+		
+		
+<text>
+  <name>mgbca</name>
+  <font>courier-bold.txf</font>
+  <character-size type="double">0.009</character-size>
+  <offsets>
+  <x-m>0.0015</x-m>
+   <y-m>-0.005</y-m>
+   <z-m>-0.015</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">*</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text> 
+ 
+ <animation>
+		<type>translate</type>
+		 <object-name>mgbca</object-name>
+		<property>engines/engine/oil-pressure-bar</property>
+		  <interpolation>
+            <entry><ind>0.0</ind><dep>0</dep></entry>
+            <entry><ind>10</ind><dep>0.117</dep></entry>
+        </interpolation>
+		<axis>
+			<z>1</z>
+		</axis>
+	</animation>
+
+
+<text>
+  <name>mgbpa</name>
+  <font>courier-bold.txf</font>
+  <character-size type="double">0.009</character-size>
+  <offsets>
+   <x-m>0.0015</x-m>
+   <y-m>0.014</y-m>
+   <z-m>-0.015</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">*</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>  
+ 
+ <animation>
+		<type>translate</type>
+		 <object-name>mgbpa</object-name>
+	 <property>rotors/gear/mgb-oil-pressure-bar</property>
+		  <interpolation>
+            <entry><ind>0.0</ind><dep>0</dep></entry>
+            <entry><ind>9</ind><dep>0.117</dep></entry>
+        </interpolation>
+		<axis>
+			<z>1</z>
+		</axis>
+	</animation> 
+ 
+ 
+ <text>
+  <name>e2ca</name>
+  <font>courier-bold.txf</font>
+  <character-size type="double">0.009</character-size>
+  <offsets>
+  <x-m>0.0015</x-m>
+   <y-m>0.068</y-m>
+   <z-m>-0.015</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">*</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text> 
+ 
+ <animation>
+		<type>translate</type>
+		 <object-name>e2ca</object-name>
+		<property>engines/engine[1]/oil-temperature-degc</property>
+		  <interpolation>
+            <entry><ind>0.0</ind><dep>0</dep></entry>
+            <entry><ind>250</ind><dep>0.117</dep></entry>
+        </interpolation>
+		<axis>
+			<z>1</z>
+		</axis>
+	</animation>
+ 
+ 
+ <text>
+  <name>e2pa</name>
+  <font>courier-bold.txf</font>
+  <character-size type="double">0.009</character-size>
+  <offsets>
+  <x-m>0.0015</x-m>
+   <y-m>0.087</y-m>
+   <z-m>-0.015</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">*</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text> 
+ 
+ <animation>
+		<type>translate</type>
+		 <object-name>e2pa</object-name>
+		<property>engines/engine[1]/oil-pressure-bar</property>
+		  <interpolation>
+            <entry><ind>0.0</ind><dep>0</dep></entry>
+            <entry><ind>10</ind><dep>0.117</dep></entry>
+        </interpolation>
+		<axis>
+			<z>1</z>
+		</axis>
+	</animation> 
+
+</PropertyList>

@@ -1,0 +1,89 @@
+
+
+<PropertyList>
+ <path>startbutton.ac</path>
+ 
+ <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+   
+    <condition>
+	<or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+    </condition>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.030 </red>
+      <green> 0.015 </green>
+      <blue>  0.005 </blue>
+    
+    </emission>
+  </animation>
+
+<animation>
+  <type>material</type>
+  <object-name>MAN</object-name>
+ 
+ 
+  <ambient>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </ambient>
+  <diffuse>
+    <red>0.3</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+  </diffuse>
+  <emission>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </emission> 
+ </animation>
+ 
+ <text>
+  <name>MAN</name>
+  <font>courier-bold.txf</font>
+  <character-size type="double">0.0085</character-size>
+  <offsets>
+  <x-m>0.0039</x-m>
+   <y-m>-0.007</y-m>
+    <z-m>0.004</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">MAN</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ 
+   <animation>
+    <type>select</type>
+    <object-name>MAN</object-name>
+	
+    <condition>
+
+	<equals>
+      <property>controls/switches/fadectest</property>
+	  <value>true</value>
+	  </equals>
+	
+	
+    </condition>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Dragonfly Aviation LLC</name>
+     <texture-fuselage>liveries/dragonfly/Exterior.jpg</texture-fuselage>
+     <texture-tail>liveries/dragonfly/Exterior2.jpg</texture-tail>
+	 <texture-rotor>liveries/dragonfly/Misc.jpg</texture-rotor>
+  <texture-winch>Liveries/Winch/black.jpg</texture-winch>
+
+ 
+
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.16</refl_correction>
+    </rendering>
+  </sim>
+
+</PropertyList>

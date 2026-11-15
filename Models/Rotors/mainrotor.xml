@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+		<path>mainhub.ac</path>
+		
+	<!--  blades -->
+
+<model>
+        <name>blade1</name>
+        <path>Aircraft/bell430/Models/Rotors/blade1.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>45</heading-deg>
+	  </offsets>
+      
+    </model>	
+		
+<model>
+        <name>blade2</name>
+      <path>Aircraft/bell430/Models/Rotors/blade2.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+		 <heading-deg>135</heading-deg>
+       </offsets>
+
+    </model>
+
+<model>
+        <name>blade3</name>
+      <path>Aircraft/bell430/Models/Rotors/blade3.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+		 <heading-deg>225</heading-deg>
+       </offsets>
+
+    </model>	
+
+<model>
+        <name>blade4</name>
+       <path>Aircraft/bell430/Models/Rotors/blade4.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+		 <heading-deg>315</heading-deg>
+       </offsets>
+
+    </model>
+
+	
+
+
+ <animation>
+<name>rotorcomplete</name>
+ <object-name>mainhub</object-name>
+ 
+  <object-name>blade1</object-name>
+  <object-name>blade2</object-name>
+  <object-name>blade3</object-name>
+  <object-name>blade4</object-name>
+  </animation>
+
+	 <animation>
+        <type>spin</type>
+       <object-name>rotorcomplete</object-name>
+ 		
+        <property>rotors/main/rpm</property>
+	<factor>1</factor>
+        <center>
+           
+            <x-m> 0.00</x-m>
+            <y-m>-0.00</y-m>
+            <z-m>2.5</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+	  
+        </axis>
+    </animation>
+	
+	
+
+
+	
+	
+</PropertyList>
+
+
+

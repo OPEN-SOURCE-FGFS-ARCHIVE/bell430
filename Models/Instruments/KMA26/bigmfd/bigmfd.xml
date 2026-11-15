@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	
+ 
+ 
+    <path>bigmfd.ac</path>
+	
+	
+ <!-- engine 1 -->
+<model>
+<name>screen1</name>
+		<path>Aircraft/bell430/Models/Instruments/bigmfd/IIDS/iids.xml</path>
+		<offsets>
+			<x-m>0.01</x-m>
+			<y-m>0.1</y-m>
+			<z-m>-0.01</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<overlay>
+			
+			 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.63</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+		</overlay>
+		
+	</model>
+	
+	
+
+	
+
+<!-- Engine 2		 -->
+
+<model>
+<name>screen2</name>
+		<path>Aircraft/bell430/Models/Instruments/bigmfd/IIDS/iids2.xml</path>
+		<offsets>
+			<x-m>0.01</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.01</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<overlay>
+			
+			 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.63</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+		</overlay>
+		
+	</model>
+
+<!-- cws componant -->
+	
+	<model>
+	<name>cws</name>
+		<path>Aircraft/bell430/Models/Instruments/CWS/CWS_t2.xml</path>
+		<offsets>
+			<x-m>0.008</x-m>
+			<y-m>-0.0975</y-m>
+			<z-m>-0.058</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<overlay>
+			
+			 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.99</y-offset>
+    <z-offset>0.5</z-offset>
+   </animation>
+		</overlay>
+		
+	</model>
+
+ <animation>
+    <type>select</type>
+   
+    <object-name>screen1</object-name>
+   <object-name>screen2</object-name>
+   <object-name>cws</object-name>
+   
+    <condition>
+	<or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+    </condition>
+</animation>
+</PropertyList>
+

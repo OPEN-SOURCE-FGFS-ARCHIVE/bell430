@@ -1,0 +1,139 @@
+<!--
+777-200 Standby Altimeter 
+-->
+
+<PropertyList>
+ <path>startbutton.ac</path>
+
+<animation>
+    <type>material</type>
+    <object-name>base</object-name>
+   <condition>
+<and>
+	<equals>
+    <property>controls/engines/engine/starter</property>
+	  <value>false</value>
+	  </equals>
+	  <equals>
+    <property>controls/engines/engine[1]/starter</property>
+	  <value>false</value>
+	  </equals>
+	 <or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+	  </and>
+    </condition>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+  
+      <red>   0.030 </red>
+      <green> 0.015 </green>
+      <blue>  0.005 </blue>
+    
+    </emission>
+  </animation>
+  
+  
+  <animation>
+  <type>material</type>
+  <object-name>START</object-name>
+ <object-name>DISENG</object-name>
+ 
+  <ambient>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </ambient>
+  <diffuse>
+    <red>0.3</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+  </diffuse>
+  <emission>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+  </emission> 
+ </animation>
+ 
+ <text>
+  <name>START</name>
+  <font>courier-bold.txf</font>
+  <character-size type="double">0.007</character-size>
+  <offsets>
+  <x-m>0.0039</x-m>
+   <y-m>-0.008</y-m>
+    <z-m>0.006</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">START</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+  <text>
+  <name>DISENG</name>
+  <font>courier-bold.txf</font>
+  <character-size type="double">0.007</character-size>
+  <offsets>
+  <x-m>0.0039</x-m>
+   <y-m>-0.01</y-m>
+    <z-m>0.000</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">DISENG</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <animation>
+    <type>select</type>
+    <object-name>START</object-name>
+	 <object-name>DISENG</object-name>
+  <condition>
+	<or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>button</object-name>
+         <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+ 		 
+	<binding>
+							<command>nasal</command>
+							<script>bo105.shutdown()</script>
+						</binding>
+	 
+	  </action>
+  </animation>
+
+</PropertyList>

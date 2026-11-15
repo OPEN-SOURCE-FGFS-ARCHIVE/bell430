@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>Turn.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>ball</object-name> 
+    <object-name>needle</object-name> 
+  </animation>
+
+
+<!--Working For Rembrandt-->
+
+
+<effect>
+  <inherits-from>Effects/model-transparent</inherits-from>
+  <object-name>Front</object-name>
+   <object-name>Ring</object-name>
+   <object-name>Bezel</object-name>
+    <object-name>Face</object-name>
+	 <object-name>Pitch</object-name>
+</effect>
+
+
+<!--Working For Rembrandt-->
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+   <object-name>ball</object-name>
+   <object-name>needle</object-name>
+  <condition>
+	<or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+   
+  </animation>
+
+
+
+
+
+
+
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>  
+    <emission>
+       <red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+<factor-prop>/controls/lighting/dash-dim</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+    <factor> 20 </factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ball</object-name>
+    <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <factor>16</factor>
+<emission>
+     
+         <red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+<factor-prop>/controls/lighting/dash-dim</factor-prop>
+    </emission>
+    <min-deg> -19 </min-deg>
+    <max-deg>  19 </max-deg>
+    <center>
+      <x-m> 0.00 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 0.05 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Coompositor lights-->
+  
+  <light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>0.15</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>9</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.08</range-m>
+   <intensity>0.5</intensity>
+  <dim-factor>
+    <property>systems/electrical/outputs/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+ <condition>
+   <equals>
+    <property>controls/lighting/turn-off-lights</property>
+    <value>true</value>
+   </equals>
+  <and>
+  
+  <or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+  </and>
+  </condition>
+ </animation>
+
+</PropertyList>
+

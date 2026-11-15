@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--originally made by syd Adams, DHC 6-->
+
+<PropertyList>
+
+<path>magcompass.ac</path>
+
+	 <animation>
+        <type>material</type>
+		<object-name>Compass.ball</object-name>
+       <condition>
+	<or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Compass.ball</object-name>
+        <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>overhead.ac</path>
+
+<!-- rocker switches -->
+
+<!-- Hyd 1  Not active -->
+
+<model>
+		
+		<path>Aircraft/bell430/Models/Instruments/switches/rockerswitch.xml</path>
+		<offsets>
+			<x-m>-2.966</x-m>
+			<y-m>0.114</y-m>
+			<z-m>0.8395</z-m>
+		
+		<pitch-deg>60</pitch-deg>
+		<heading-deg>180</heading-deg>
+		</offsets>
+		 <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>2</y-offset>
+    <z-offset>1.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	<!-- Hyd 2  Not active -->
+
+<model>
+		
+		<path>Aircraft/bell430/Models/Instruments/switches/rockerswitch.xml</path>
+		<offsets>
+			<x-m>-2.966</x-m>
+			<y-m>0.159</y-m>
+			<z-m>0.8395</z-m>
+		
+		<pitch-deg>60</pitch-deg>
+		<heading-deg>180</heading-deg>
+		</offsets>
+		 <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>2</y-offset>
+    <z-offset>1.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	
+	<!-- gen 1   -->
+
+<model>
+		
+		<path>Aircraft/bell430/Models/Instruments/switches/gen1.xml</path>
+		<offsets>
+			<x-m>-2.966</x-m>
+			<y-m>0.23</y-m>
+			<z-m>0.8395</z-m>
+		
+		<pitch-deg>80</pitch-deg>
+		<heading-deg>180</heading-deg>
+		</offsets>
+		 <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>2</y-offset>
+    <z-offset>1.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	<!-- gen 2   -->
+
+<model>
+		
+		<path>Aircraft/bell430/Models/Instruments/switches/gen2.xml</path>
+		<offsets>
+			<x-m>-2.966</x-m>
+			<y-m>0.277</y-m>
+			<z-m>0.8395</z-m>
+		
+		<pitch-deg>80</pitch-deg>
+		<heading-deg>180</heading-deg>
+		</offsets>
+		 <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>2</y-offset>
+    <z-offset>1.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+		<!-- battery   -->
+
+<model>
+		
+		<path>Aircraft/bell430/Models/Instruments/switches/battery.xml</path>
+		<offsets>
+			<x-m>-2.966</x-m>
+			<y-m>0.319</y-m>
+			<z-m>0.8395</z-m>
+		
+		<pitch-deg>80</pitch-deg>
+		<heading-deg>180</heading-deg>
+		</offsets>
+		 <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>2</y-offset>
+    <z-offset>1.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	
+</PropertyList>
+
+
+

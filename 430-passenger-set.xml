@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<!--
+  MD500 multiplayer passenger view.
+
+  Copyright (C) 2009  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license version 2 or later.
+-->
+<!--
+  Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircraft=Fi-156-passenger
+-->
+<PropertyList>
+
+ <sim>
+
+  <description>Bell430 Multiplayer passenger</description>
+  <author>Anders Gidenstam</author>
+  <status>alpha</status>
+  <aircraft-version>$Id$</aircraft-version>
+  
+  <flight-model>null</flight-model>
+
+  <presets>
+   <onground type="bool">false</onground>
+   <altitude-agl-ft type="double">30.0</altitude-agl-ft>
+  </presets>
+  
+  
+  <instrumentation>
+	
+<path>Aircraft/bell430/System/instrumentation.xml</path>
+</instrumentation>
+
+
+	  <systems>
+      <electrical>
+        <path>Aircraft/bell430/System/fgukelectrical.xml</path>
+      </electrical>
+     
+	  <autopilot n="101">
+        <path>Aircraft/bell430/System/glass-rain.xml</path>
+        </autopilot>
+    </systems> 
+		
+  
+  
+  <hud>
+   <path n="1">Aircraft/bell430/Hud/hud.xml</path>
+   <visibility n="1">true</visibility>
+
+   <palette>
+    <color n="0">
+     <alpha type="float">0.85</alpha>
+     <antialiased type="bool">true</antialiased>
+     <brightness type="float">0.85</brightness>
+     <transparent type="bool">true</transparent>
+     <red type="float">0.38</red>
+     <green type="float">0.38</green>
+     <blue type="float">0.22</blue>
+    </color>
+
+   </palette>
+
+  </hud>	
+
+  <!-- 3d model -->
+  <model>
+   <path>Aircraft/bell430/Models/Bell430-Passenger.xml</path>
+   <bo105>
+     <!--  For switching between shiny and non shiny paint in HDR mode -->
+			 <hdr>true</hdr>
+				<als>false</als>
+				<!-- -->
+	</bo105>			
+  </model>
+  
+  	<rendering>
+    <refl_correction type="string">-0.25</refl_correction>
+    </rendering>
+
+  <!-- Views -->
+  <view n="0">
+   <!-- Passenger's position. -->
+   <name>Copilot View</name>
+   <type>lookfrom</type>
+   <config>
+    <internal type="bool">true</internal>
+    <from-model type="bool">false</from-model>
+    <from-model-idx type="int">0</from-model-idx>
+    <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
+    <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
+    <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+    <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
+    <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
+    <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
+
+    <!-- x/y/z == right/up/back -->
+ <x-offset-m archive="y">-0.40</x-offset-m><!--right-->
+	<y-offset-m archive="y">0.6</y-offset-m><!--up-->
+	<z-offset-m archive="y">-2.5</z-offset-m><!--back-->
+	<pitch-offset-deg archive="y">-6</pitch-offset-deg>
+    <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+   </config>
+  </view>
+  <!-- Views -->
+  <view n="100">
+    <name>Pilot cam</name>
+        <internal archive="y">false</internal>
+        <config>
+		 <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+        <x-offset-m archive="y">0</x-offset-m><!--right-->
+	<y-offset-m archive="y">0.6</y-offset-m><!--up-->
+	<z-offset-m archive="y">-3.2</z-offset-m><!--back-->
+          <pitch-offset-deg>0</pitch-offset-deg>
+		  <heading-offset-deg>199</heading-offset-deg>
+          <default-field-of-view-deg>110</default-field-of-view-deg>
+        </config>
+     
+  </view>
+  
+  
+  	<view n="101">
+			<name>Over the shoulder</name>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+			<x-offset-m archive="y">0.0</x-offset-m><!--right-->
+				<y-offset-m archive="y">0.8</y-offset-m><!--up-->
+				<z-offset-m archive="y">-2.1</z-offset-m><!--back-->
+				<pitch-offset-deg>-14</pitch-offset-deg>
+				<heading-offset-deg>-19</heading-offset-deg>
+				<default-field-of-view-deg>65</default-field-of-view-deg>
+			</config>
+		</view>
+		
+		 <view n="102">
+			<name>FLIR</name>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<x-offset-m archive="y">-0.55</x-offset-m><!--right-->
+				<y-offset-m archive="y">-0.8</y-offset-m><!--up-->
+				<z-offset-m archive="y">-2.6</z-offset-m><!--back-->
+				<pitch-offset-deg>0</pitch-offset-deg>
+				<heading-offset-deg>0</heading-offset-deg>
+				<default-field-of-view-deg>65</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">160</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">130</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
+					</right>
+					</limits>
+			</config>
+	         <flir type="bool">true</flir>
+
+		</view>
+
+ <view n="1">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="2">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="3">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="4">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="5">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+
+  <chase-distance-m type="double">-18.0</chase-distance-m>
+
+ 	<sound>
+			<path>Aircraft/bell430/Sounds/sound.xml</path>
+		</sound>
+ 
+ <weight n="0">
+<name>Configuration</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+
+</weight>
+
+<flir>
+			<view type="int">101</view>
+			<weight type="int">0</weight>
+			<options>
+				<name>none</name>
+			
+			</options>
+		</flir>
+ 
+ 
+  <menubar>
+   <default>
+    <menu n="100">
+     <label>Bell 430</label>
+     <item>
+      <label>Select MP-pilot</label>
+      <binding>
+       <command>nasal</command>
+       <script>
+        dual_control_tools.
+          copilot_dialog.show(aircraft_dual_control.pilot_type);
+       </script>
+      </binding>
+     </item>
+    </menu>
+   </default>
+  </menubar>
+
+ </sim>
+
+ <nasal>
+  	<flir>
+			<file>Aircraft/bell430/Nasal/flir.nas</file>
+		</flir>	
+ 
+  <dual_control_tools>
+   <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+  </dual_control_tools>
+  <aircraft_dual_control>
+   <file>Aircraft/Bell430/Nasal/430-dual-control.nas</file>
+  </aircraft_dual_control>
+  <dual_control>
+   <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+  </dual_control>
+ </nasal>
+
+</PropertyList>
